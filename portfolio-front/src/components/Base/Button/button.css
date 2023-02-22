@@ -1,0 +1,28 @@
+.button-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgb(222, 222, 224);
+
+  color: black;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+}
+
+.button-text a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.button-text p {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px 0px;
+}

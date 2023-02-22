@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Core/Nav/nav.astro';
+
+// React
+import ContactGrid from '../components/Helpers/ContactGrid';
+---
+
+<Layout title="Juan Vargas | Contact">
+	<Nav />
+	<main class="w-full h-full transition">
+		<ContactGrid client:only="react" />
+	</main>
+</Layout> 

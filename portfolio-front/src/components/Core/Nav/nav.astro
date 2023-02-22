@@ -1,0 +1,58 @@
+---
+import './nav.css';
+---
+
+<header class="flex h-16 md:h-32 p-6 md:p-14 justify-between">
+  <a href="/" class="nav-logo_link relative z-10">
+    <h1 class="text-base font-medium">
+      Juan Vargas
+    </h1>
+  </a>
+
+  <nav>
+    <ul class="shadow-md">
+      <li id="/" class="text-sm md:text-base font-medium">
+        <a href="/">Home</a>
+      </li>
+      <li id="/about" class="text-sm md:text-base font-medium">
+        <a href="/about">About</a>
+      </li>
+      <li id="/work" class="text-sm md:text-base font-medium">
+        <a href="/work">Work</a>
+      </li>
+      <li id="/contact" class="text-sm md:text-base font-medium">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <ul class="nav-social z-10 gap-4">
+    <li>
+      <a href="mailto:vargasm.jp@gmail.com">
+        <img src="svg/email.svg" alt="email icon" />
+      </a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/file/d/1gdPGUCfF5k_vEiy5hesaeY7hH0m-CAjo/view?usp=sharing">
+        <img src="svg/cv.svg" alt="cv icon" />
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/jpvargasdev">
+        <img src="svg/twitter.svg" alt="twitter icon" />
+      </a>
+    </li>
+  </ul>
+</header>
+
+<script>
+  const url = new URL(document.URL);
+  const el = document.getElementById(url.pathname);
+  if (el) {
+    el.classList.add('nav-item_selected');
+    const anchorEl = el.getElementsByTagName('a');
+    if (anchorEl) {
+      anchorEl[0].classList.add('nav-item_text');
+    }
+  }
+</script>

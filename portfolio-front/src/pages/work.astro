@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Core/Nav/nav.astro';
+import GameOfLife from '../components/Core/GameOfLife';
+---
+
+<Layout title="Juan Vargas | Work">
+	<main class="w-full h-full transition">
+    <Nav />
+		<GameOfLife client:only="react"/>
+	</main>
+</Layout>

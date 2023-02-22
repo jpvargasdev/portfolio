@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Core/Nav/nav.astro';
+import AboutGrid from '../components/Helpers/AboutGrid';
+---
+
+<Layout title="Juan Vargas | Work">
+	<main class="w-full h-full transition">
+    <Nav />
+    <AboutGrid client:only="react"/>
+	</main>
+</Layout>

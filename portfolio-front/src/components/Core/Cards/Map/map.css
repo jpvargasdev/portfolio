@@ -1,0 +1,124 @@
+.plus {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffc400;
+  height: 45px;
+  width: 45px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.plus:hover {
+  transform: scale(1.2);
+}
+
+.plus p {
+  height: 100%;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.minus {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffc400;
+  height: 45px;
+  width: 45px;
+  border-radius: 30px;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.minus:hover {
+  transform: scale(1.2);
+}
+
+.minus p {
+  height: 100%;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.map {
+  object-fit: cover;
+}
+
+.map-pin {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.pin-container {
+  position: absolute;
+  left: 42%;
+  top: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate3d(1, 0, 0, 60deg);
+  -moz-transform: rotate3d(1, 0, 0, 60deg);
+  -o-transform: rotate3d(1, 0, 0, 60deg);
+}
+
+.pulse {
+  position: absolute;
+  border-radius: 40px;
+  background-color: transparent;
+  animation: pulse 1s infinite;
+  padding: 20px;
+  border: solid 2px #ffc400;
+  opacity: 0.8;
+  top: -40px;
+}
+
+.pin {
+  position: absolute;
+  bottom: 0;
+  transform: rotate3d(1, 0, 0, 60deg);
+  -moz-transform: rotate3d(1, 0, 0, 60deg);
+  -o-transform: rotate3d(1, 0, 0, 60deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffc400;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+  }
+}
