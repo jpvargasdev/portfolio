@@ -13,7 +13,7 @@ function Link() {
   }, []);
   return (
     <div className="flex flex-col p-6 flex h-full justify-between items-center">
-      <div className="text-xl font-semibold text-font_secondary text-xl">
+      <div className="text-xl font-semibold text-font_secondary">
         <span className="text-font_primary">Let's talk!</span> about your
         project
         <br />

@@ -7,6 +7,21 @@ const maxCols = 15;
 const intervalTime = 250;
 const maxIteration = 20;
 
+function defaultGrid(grid: number[][]) {
+  const newGrid = { ...grid };
+
+  newGrid[0][0] = 1;
+  newGrid[0][1] = 1;
+  newGrid[1][0] = 1;
+  newGrid[1][3] = 1;
+  newGrid[2][1] = 1;
+  newGrid[2][2] = 1;
+  newGrid[4][3] = 1;
+  newGrid[2][3] = 1;
+
+  return newGrid;
+}
+
 function initializeRandomGrid(grid: number[][]) {
   const newGrid = { ...grid };
 
@@ -95,7 +110,13 @@ function GameOfLife() {
 
   useEffect(() => {
     function initializeGrid() {
-      setGrid(initializeRandomGrid(grid));
+      let mGrid = [];
+      try {
+        mGrid = initializeRandomGrid(grid);
+      } catch (ex) {
+        mGrid = defaultGrid(grid);
+      }
+      setGrid(mGrid);
     }
 
     function nextStep() {
@@ -112,7 +133,11 @@ function GameOfLife() {
     return () => clearInterval(interval);
   }, []);
 
-  return <Grid grid={grid} rows={maxRows} cols={maxCols} />;
+  return (
+    <div>
+      <Grid grid={grid} rows={maxRows} cols={maxCols} />
+    </div>
+  );
 }
 
 export default GameOfLife;

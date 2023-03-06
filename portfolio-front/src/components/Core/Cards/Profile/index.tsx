@@ -11,12 +11,7 @@ function Profile() {
 
           <div className="btn-more">
             <a href="/about" className="text-white font-semibold text-base">
-              About me
-              <img
-                src="svg/right-arrow_white.svg"
-                alt="right arrow"
-                className="w-20 h-20"
-              />
+              About me →
             </a>
           </div>
         </div>

@@ -4,8 +4,8 @@ import Button from '../../../Base/Button';
 
 function CurriculumCard() {
   return (
-    <div className="flex flex-1 flex-col h-full justify-between p-6">
-      <Lottie loop play path="lottie/cv.json" />
+    <div className="flex flex-1 flex-col p-6 h-full justify-between">
+      <Lottie loop play path="lottie/cv.json" className="h-56" />
       <Button>
         <a href="https://drive.google.com/file/d/1gdPGUCfF5k_vEiy5hesaeY7hH0m-CAjo/view?usp=sharing">
           View my resume →

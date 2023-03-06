@@ -47,24 +47,29 @@ function AboutGrid() {
   const style = 'bg-card_light rounded-3xl hover:shadow-md cursor-grab';
 
   return (
-    <ResponsiveGridLayout
-      layouts={LAYOUTS}
-      cols={COLS}
-      breakpoints={BREAKPOINTS}
-      rowHeight={360}
-      isResizable={false}
-      margin={[24, 24]}
-    >
-      <div className={style} key="contact">
-        <ContactCard />
-      </div>
-      <div className={style} key="twitter">
-        <TwitterCard link="https://twitter.com/jpvargasdev" label="DM Me →" />
-      </div>
-      <div className={style} key="link">
-        <LinkCard />
-      </div>
-    </ResponsiveGridLayout>
+    <div className="lg:px-22 xl:px-40 xxl:px-60 sm:px-0">
+      <ResponsiveGridLayout
+        layouts={LAYOUTS}
+        cols={COLS}
+        breakpoints={BREAKPOINTS}
+        rowHeight={360}
+        isResizable={false}
+        margin={[24, 24]}
+      >
+        <div className={style} key="contact">
+          <ContactCard />
+        </div>
+        <div className={style} key="twitter">
+          <TwitterCard
+            link='https://twitter.com/messages/1248228351459950592-1248228351459950592?text="Hey"'
+            label="DM Me →"
+          />
+        </div>
+        <div className={style} key="link">
+          <LinkCard />
+        </div>
+      </ResponsiveGridLayout>
+    </div>
   );
 }
 

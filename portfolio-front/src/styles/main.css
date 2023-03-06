@@ -6,8 +6,8 @@ html {
   font-size: 16px;
 
   /* Load system fonts */
-  font-family: -apple-system, Graphik, Inter, BlinkMacSystemFont, San Francisco, Segoe UI,
-  Roboto, Helvetica Neue, sans-serif;
+  font-family: -apple-system, Graphik, Inter, BlinkMacSystemFont, San Francisco,
+    Segoe UI, Roboto, Helvetica Neue, sans-serif;
 
   /* Make type rendering look crisper */
   -webkit-font-smoothing: antialiased;
@@ -43,8 +43,8 @@ body {
   display: inline-block;
   flex: 1;
   border: 1px solid gray;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   margin-left: -1px;
   margin-bottom: -1px;
 }

@@ -2,11 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Core/Nav/nav.astro';
 import AboutGrid from '../components/Helpers/AboutGrid';
+import * as GooglePhotosAlbum from 'google-photos-album-image-url-fetch';
+
+
+const URL = 'https://photos.app.goo.gl/Mhvixre67TWXifBi9';
+
+const response = await GooglePhotosAlbum.fetchImageUrls(URL)
+const images = response;
 ---
 
 <Layout title="Juan Vargas | Work">
 	<main class="w-full h-full transition">
     <Nav />
-    <AboutGrid client:only="react"/>
+    <AboutGrid client:only="react" images={images} />
 	</main>
 </Layout>

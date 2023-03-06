@@ -11,6 +11,8 @@ import { isTouchDevice } from '../../../utils';
 import SpotifyCard from '../../Core/Cards/Spotify';
 import PhotosCard from '../../Core/Cards/Photos';
 import ContactCard from '../../Core/Cards/Contact';
+import type { ImageInfo } from 'google-photos-album-image-url-fetch';
+import Blog from '../../Core/Cards/Blog';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 const isDraggable = !isTouchDevice();
@@ -25,21 +27,26 @@ const LAYOUTS = {
     { i: 'podcast', x: 1, y: 2, w: 1, h: 1, isDraggable },
     { i: 'photos', x: 1, y: 3, w: 1, h: 1, isDraggable },
     { i: 'music', x: 1, y: 4, w: 1, h: 1, isDraggable },
+    { i: 'contact', x: 2, y: 0, w: 1, h: 1, isDraggable },
+    { i: 'blog', x: 1, y: 4, w: 1, h: 1, isDraggable },
   ],
   sm: [
     { i: 'header', x: 0, y: 0, w: 2, h: 2, isDraggable },
     { i: 'twitter', x: 2, y: 0, w: 1, h: 1, isDraggable },
     { i: 'podcast', x: 3, y: 0, w: 1, h: 1, isDraggable },
-    { i: 'music', x: 2, y: 0, w: 1, h: 1, isDraggable },
-    { i: 'photos', x: 3, y: 0, w: 1, h: 1, isDraggable },
+    { i: 'music', x: 0, y: 0, w: 1, h: 1, isDraggable },
+    { i: 'photos', x: 0, y: 0, w: 1, h: 1, isDraggable },
+    { i: 'contact', x: 2, y: 0, w: 2, h: 1, isDraggable },
+    { i: 'blog', x: 1, y: 4, w: 2, h: 1, isDraggable },
   ],
   md: [
     { i: 'header', x: 0, y: 0, w: 2, h: 3, isDraggable },
     { i: 'twitter', x: 2, y: 0, w: 1, h: 1, isDraggable },
     { i: 'podcast', x: 3, y: 0, w: 1, h: 1, isDraggable },
-    { i: 'music', x: 2, y: 0, w: 1, h: 1, isDraggable },
-    { i: 'photos', x: 3, y: 0, w: 1, h: 1, isDraggable },
+    { i: 'music', x: 2, y: 1, w: 1, h: 1, isDraggable },
+    { i: 'photos', x: 3, y: 1, w: 1, h: 1, isDraggable },
     { i: 'contact', x: 2, y: 0, w: 2, h: 1, isDraggable },
+    { i: 'blog', x: 1, y: 4, w: 4, h: 1, isDraggable },
   ],
   lg: [
     { i: 'header', x: 0, y: 0, w: 2, h: 3, isDraggable },
@@ -48,10 +55,11 @@ const LAYOUTS = {
     { i: 'music', x: 2, y: 1, w: 1, h: 1, isDraggable },
     { i: 'photos', x: 3, y: 1, w: 1, h: 1, isDraggable },
     { i: 'contact', x: 2, y: 0, w: 2, h: 1, isDraggable },
+    { i: 'blog', x: 1, y: 4, w: 4, h: 1, isDraggable },
   ],
 };
 
-function AboutGrid() {
+function AboutGrid({ images }: { images: ImageInfo[] | null }) {
   const style = 'bg-card_light rounded-3xl hover:shadow-md cursor-grab';
 
   return (
@@ -79,7 +87,7 @@ function AboutGrid() {
         />
       </div>
       <div className={style} key="photos">
-        <PhotosCard />
+        <PhotosCard images={images} />
       </div>
       <div className={style} key="music">
         <SpotifyCard
@@ -89,6 +97,9 @@ function AboutGrid() {
       </div>
       <div className={style} key="contact">
         <ContactCard />
+      </div>
+      <div className={style} key="blog">
+        <Blog />
       </div>
     </ResponsiveGridLayout>
   );
