@@ -8,7 +8,7 @@ function TwitterCard({ link, label }: { link: string; label: string }) {
     <div className="p-6 twitter-container flex justify-between h-full w-full flex-col">
       <div className="flex justify-between items-start">
         <div className="flex justify-start items-center">
-          <a href="https://twitter.com/jpvargasdev">
+          <a href="https://twitter.com/jpvargasdev" target="_blank">
             <img
               src="twitter-profile.jpeg"
               alt="twitter profile image"
@@ -19,6 +19,7 @@ function TwitterCard({ link, label }: { link: string; label: string }) {
           <a
             className="twitter-header_profile_text ml-2"
             href="https://twitter.com/jpvargasdev"
+            target="_blank"
           >
             <p className="text-xl font-semibold text-font_primary leading-none">
               Juan ✦
@@ -30,7 +31,7 @@ function TwitterCard({ link, label }: { link: string; label: string }) {
         </div>
 
         <div>
-          <a href="https://twitter.com/jpvargasdev">
+          <a href="https://twitter.com/jpvargasdev" target="_blank">
             <img
               src="svg/twitter-logo.svg"
               alt="twitter logo"

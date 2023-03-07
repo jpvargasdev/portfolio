@@ -1,12 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Core/Nav/nav.astro';
-import GameOfLife from '../components/Core/GameOfLife';
+
+function getWork() {
+
+}
+
+function getProjects(nonDraftPosts: any) {
+	return nonDraftPosts.sort((a: any, b: any) => b.frontmatter.number-a.frontmatter.number);
+}
+
+const posts = await Astro.glob('./projects/*.md');
+const nonDraftPosts = posts.filter(post => !post.frontmatter.draft);
+const filteredWork = getProjects(nonDraftPosts);
+
+const liStyle = 'flex flex-row my-2 mx-2 justify-between content-center items-center';
+const pTitle = 'text-font_primary font-semibold text-base';
+const pRole = 'mx-2 text-font_secondary font-semibold text-base';
+const pDate = 'mx-2 text-font_secondary font-semibold text-base';
 ---
 
 <Layout title="Juan Vargas | Work">
 	<main class="w-full h-full transition">
     <Nav />
-		<GameOfLife client:only="react"/>
+		<div class='bg-card_light rounded-3xl hover:shadow-md mx-8 sm:mx-44 mt-12 p-6'>
+			<h3 class="text-xl font-semibold text-font_primary">Work</h3>
+			<ul>
+				{filteredWork.map((post: any) => (
+					<li>
+						<a href={post.url} class={liStyle}>
+							<p class={pTitle}>{post.frontmatter.title}</p>
+							<div class="flex flex-row justify-center content-center items-center">
+								<p class={pRole}>{post.frontmatter.position}</p>
+								<p class={pDate}>{post.frontmatter.date}</p>
+							</div>
+						</a>
+					</li>
+				))}
+			</ul>
+		</div>
 	</main>
 </Layout>

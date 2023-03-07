@@ -1,0 +1,22 @@
+---
+const {frontmatter} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>{frontmatter.title}</title>
+		
+	</head>
+	<body class="bg-background_light md:px-4 lg:px-22 xl:px-60 xxl:px-94">
+    <h1>{frontmatter.title}</h1>
+    <h2>Post author: {frontmatter.author}</h2>
+    <p>{frontmatter.description}</p>
+    <slot />
+	</body>
+</html>
