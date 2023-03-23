@@ -38,7 +38,7 @@ function Photos({ images }: { images: ImageInfo[] | null }) {
         className="absolute right-8 top-8 h-12 w-12 cursor-pointer hover:scale-110"
       >
         <img
-          src="google.png"
+          src="img/google.png"
           alt="icon google"
           className="object-contain h-full w-full"
         />
@@ -50,7 +50,7 @@ function Photos({ images }: { images: ImageInfo[] | null }) {
             onClick={() => onSetSelected(0)}
           >
             <img
-              src="svg/travel.svg"
+              src="/svg/travel.svg"
               alt="icon travel"
               className="h-6 w-6"
             ></img>
@@ -60,14 +60,14 @@ function Photos({ images }: { images: ImageInfo[] | null }) {
             className="h-full bg-background_light rounded-full p-2 border my-2 cursor-pointer hover:scale-110"
             onClick={() => onSetSelected(1)}
           >
-            <img src="svg/food.svg" alt="icon travel" className="h-6 w-6"></img>
+            <img src="/svg/food.svg" alt="icon travel" className="h-6 w-6"></img>
           </li>
 
           <li
             className="h-full bg-background_light rounded-full p-2 border my-2 cursor-pointer hover:scale-110"
             onClick={() => onSetSelected(2)}
           >
-            <img src="svg/rock.svg" alt="icon travel" className="h-6 w-6"></img>
+            <img src="/svg/rock.svg" alt="icon travel" className="h-6 w-6"></img>
           </li>
         </ul>
       </div>

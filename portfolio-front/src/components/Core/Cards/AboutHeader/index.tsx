@@ -70,7 +70,7 @@ function Header() {
           <ul className="nav-social z-10 gap-4">
             <li>
               <a href="mailto:vargasm.jp@gmail.com" target="_blank">
-                <img src="svg/email.svg" alt="email icon" />
+                <img src="/svg/email.svg" alt="email icon" />
               </a>
             </li>
             <li>
@@ -78,17 +78,17 @@ function Header() {
                 href="https://drive.google.com/file/d/1gdPGUCfF5k_vEiy5hesaeY7hH0m-CAjo/view?usp=sharing"
                 target="_blank"
               >
-                <img src="svg/cv.svg" alt="cv icon" />
+                <img src="/svg/cv.svg" alt="cv icon" />
               </a>
             </li>
             <li>
               <a href="https://twitter.com/jpvargasdev" target="_blank">
-                <img src="svg/twitter.svg" alt="twitter icon" />
+                <img src="/svg/twitter.svg" alt="twitter icon" />
               </a>
             </li>
             <li>
               <a href="https://github.com/jpvargasdev" target="_blank">
-                <img src="svg/github.svg" alt="github icon" />
+                <img src="/svg/github.svg" alt="github icon" />
               </a>
             </li>
           </ul>

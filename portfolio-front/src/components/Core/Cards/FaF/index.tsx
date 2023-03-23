@@ -12,10 +12,10 @@ function FunAndFreelance() {
           <GameOfLife />
         </div>
         <div className="rounded-3xl flex flex-row  bg-[#FFDC25] h-40 w-40 hover:scale-110 border shadow mt-10 xs:mt-0">
-          <img src="routte.png" className="object-cover" />
+          <img src="/img/routte.png" className="object-cover" />
         </div>
         <div className="rounded-3xl flex flex-row rotate-0 xs:rotate-12 bg-background_light h-40 w-40 mt-10 hover:scale-110 border shadow">
-          <img src="artgrama.webp" />
+          <img src="/img/artgrama.webp" />
         </div>
       </div>
 

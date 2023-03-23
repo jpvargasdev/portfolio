@@ -10,7 +10,7 @@ function TwitterCard({ link, label }: { link: string; label: string }) {
         <div className="flex justify-start items-center">
           <a href="https://twitter.com/jpvargasdev" target="_blank">
             <img
-              src="twitter-profile.jpeg"
+              src="/img/twitter-profile.jpeg"
               alt="twitter profile image"
               className="twitter-header_profile"
             />
@@ -33,7 +33,7 @@ function TwitterCard({ link, label }: { link: string; label: string }) {
         <div>
           <a href="https://twitter.com/jpvargasdev" target="_blank">
             <img
-              src="svg/twitter-logo.svg"
+              src="/svg/twitter-logo.svg"
               alt="twitter logo"
               className="flex twitter-header_logo"
             />
